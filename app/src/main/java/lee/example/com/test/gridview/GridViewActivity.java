@@ -35,6 +35,11 @@ public class GridViewActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GridViewActivity.this,"长按 pos："+position,Toast.LENGTH_SHORT).show();
                 return true;
+
+
+
+
+
             }
         });
 
