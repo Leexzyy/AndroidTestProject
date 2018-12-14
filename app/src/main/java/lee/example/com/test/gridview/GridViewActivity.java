@@ -21,6 +21,9 @@ public class GridViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gridview);
         mGV = findViewById(R.id.gv);
         mGV.setAdapter(new MyGridViewAdapter(GridViewActivity.this));
+
+
+
     }
 
 }
