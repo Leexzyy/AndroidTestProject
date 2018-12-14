@@ -60,7 +60,7 @@ public class MyGridViewAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         //赋值
-        holder.textView.setText("花");
+        holder.textView.setText("glide");
         Glide.with(mContext).load("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg").into(holder.imageView);
         return convertView;
     }
