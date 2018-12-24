@@ -14,7 +14,7 @@ import lee.example.com.test.R;
 /***
 
  *Create By Lee  On 2018/12/14
-
+˙
  **/
 public class GridViewActivity extends AppCompatActivity {
     private GridView mGV;
@@ -35,11 +35,6 @@ public class GridViewActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GridViewActivity.this,"长按 pos："+position,Toast.LENGTH_SHORT).show();
                 return true;
-
-
-
-
-
             }
         });
 
