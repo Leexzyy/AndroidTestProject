@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import lee.example.com.test.R;
 
+
+//这个是实现各种事件的activity 例如点击事件 分割线等等等
+
 public class LinearRecyclerViewActivity extends AppCompatActivity {
     private RecyclerView mRvMain;
 
