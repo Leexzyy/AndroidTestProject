@@ -19,6 +19,7 @@ public class HorRecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hor_recycler_view);
         mRvHor = findViewById(R.id.rv_hor);
+        //先写布局管理器
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HorRecyclerViewActivity.this);
 
         //设置方向——水平方向

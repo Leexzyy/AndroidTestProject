@@ -19,8 +19,14 @@
         android:text="水平滚动"/>
 
     <Button
-        android:id="@+id/btn_grid"
+    android:id="@+id/btn_grid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="网格视图"/>
+
+    <Button
+        android:id="@+id/btn_pu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="网格视图"/>
+        android:text="瀑布流"/>
 </LinearLayout>

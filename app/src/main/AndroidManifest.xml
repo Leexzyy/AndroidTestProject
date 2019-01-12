@@ -29,7 +29,8 @@
         <activity android:name=".recycleview.RecyclerViewActivity" />
         <activity android:name=".recycleview.LinearRecyclerViewActivity" />
         <activity android:name=".recycleview.HorRecyclerViewActivity" />
-        <activity android:name=".recycleview.GridRecyclerViewActivity"></activity>
+        <activity android:name=".recycleview.GridRecyclerViewActivity" />
+        <activity android:name=".recycleview.PuRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

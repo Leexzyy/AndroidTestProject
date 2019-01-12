@@ -15,7 +15,7 @@ import lee.example.com.test.gridview.GridViewActivity;
 //进入各个RecyclerView项目Activity跳转界面！
 public class RecyclerViewActivity extends AppCompatActivity {
 
-    private Button mBtnLinear,mBtnHor,mBtnGrid;
+    private Button mBtnLinear,mBtnHor,mBtnGrid,mBtnPu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         mBtnGrid = findViewById(R.id.btn_grid);
         mBtnLinear = findViewById(R.id.btn_linear);
         mBtnHor = findViewById(R.id.btn_hor);
+        mBtnPu = findViewById(R.id.btn_pu);
 
         //各个跳转界面
         mBtnLinear.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +47,13 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecyclerViewActivity.this,GridRecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnPu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerViewActivity.this,PuRecyclerViewActivity.class);
                 startActivity(intent);
             }
         });

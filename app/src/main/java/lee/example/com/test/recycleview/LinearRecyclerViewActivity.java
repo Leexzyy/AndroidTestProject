@@ -21,6 +21,7 @@ public class LinearRecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linear_recycler_view);
         mRvMain = findViewById(R.id.rv_main);
+        //管理器
         mRvMain.setLayoutManager(new LinearLayoutManager(LinearRecyclerViewActivity.this));
         //可以绘制下划线Item的分割线
         mRvMain.addItemDecoration(new MyDecoration());
