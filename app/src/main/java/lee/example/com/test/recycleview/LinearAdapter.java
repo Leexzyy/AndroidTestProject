@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ import lee.example.com.test.R;
  *Create By Lee  On 2019/1/2
 
  **/
-public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
+public class LinearAdapter extends RecyclerView.Adapter< RecyclerView.ViewHolder> {
 
     private Context mContext;
 
@@ -31,21 +32,41 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
 
 
     @Override
-    public LinearAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_ltem,parent,false));
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (viewType == 0 ){
+            return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_ltem,parent,false));
+        }else{
+            return new LinearViewHolder2(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_ltem_2,parent,false));
+        }
     }
 
     @Override
-    public void onBindViewHolder(LinearAdapter.LinearViewHolder holder, final int position) {
+    public void onBindViewHolder( RecyclerView.ViewHolder holder, final int position) {
         //设置数据！
-        holder.textView.setText("hello!!!!!!!!");
+       if (getItemViewType(position) ==0){
+           ((LinearViewHolder) holder).textView.setText("hello!!!!!!!!");
+
+
+       }else {
+           ((LinearViewHolder2) holder).textView.setText("Leexzyy");
+       }
         //设置点击事件方法
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              mListener.onClick(position);
+                mListener.onClick(position);
             }
         });
+
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position % 2 ==0 ){
+            return 0;
+        }else{
+            return 1;
+        }
 
     }
 
@@ -65,6 +86,18 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
             super(itemView);
             textView = itemView.findViewById(R.id.tv_title);
         }
+    }
+
+    class LinearViewHolder2 extends  RecyclerView.ViewHolder{
+        private TextView textView;
+        private ImageView imageView;
+
+        public LinearViewHolder2(View itemView) {
+            super(itemView);
+            textView = itemView.findViewById(R.id.tv_title);
+            imageView = itemView.findViewById(R.id.iv_image);
+        }
+
     }
 
     //设计点击事件接口！
