@@ -9,6 +9,7 @@ import android.widget.Button;
 import lee.example.com.test.gridview.GridViewActivity;
 import lee.example.com.test.listview.ListViewActivity;
 import lee.example.com.test.recycleview.RecyclerViewActivity;
+import lee.example.com.test.recycleview.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity {
     //声明
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnListView;
     private Button mBtnGridView;
     private Button mRecyclerView;
-
+    private Button mBtnWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnListView = findViewById(R.id.btn_listview);
         mBtnGridView = findViewById(R.id.btn_gridview);
         mRecyclerView = findViewById(R.id.btn_recyclerview);
+        mBtnWebView = findViewById(R.id.btn_webview);
         setListeners();
 //        mBtnTextView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -84,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
         mRecyclerView.setOnClickListener(onClick);
+        mBtnWebView.setOnClickListener(onClick);
 
     }
 
@@ -130,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_recyclerview:
                     intent = new Intent(MainActivity.this,RecyclerViewActivity.class);
                     break;
+                case R.id.btn_webview:
+                    intent = new Intent(MainActivity.this,WebViewActivity.class);
+                    break;
+
             }
             startActivity(intent);
 
