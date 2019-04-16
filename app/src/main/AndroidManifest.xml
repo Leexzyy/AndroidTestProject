@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PopupWindowActivity"></activity>
+        <activity android:name=".ActActivity"></activity>
+        <activity android:name=".LifeCycleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,7 @@
         <activity android:name=".DialogActivity" />
         <activity android:name=".ToastActivity" />
         <activity android:name=".recycleview.WebViewActivity" />
-        <activity android:name=".UIActivity"></activity>
+        <activity android:name=".UIActivity" />
         <activity android:name=".TextViewActivity" />
         <activity android:name=".ButtenActivity" />
         <activity android:name=".EditTextActivity" />
@@ -36,6 +37,18 @@
         <activity android:name=".recycleview.HorRecyclerViewActivity" />
         <activity android:name=".recycleview.GridRecyclerViewActivity" />
         <activity android:name=".recycleview.PuRecyclerViewActivity" />
+        <activity android:name=".PopupWindowActivity"/>
+        <activity android:name=".jump.AActivity"
+            android:label="A" />
+        <activity android:name=".jump.BActivity"
+            android:label="B">
+            <intent-filter>
+                <action android:name="lee.example.com.test.jump.BActivity" />
+                                        //LAUNCHER为默认启动
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
