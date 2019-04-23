@@ -44,7 +44,6 @@
             android:label="B">
             <intent-filter>
                 <action android:name="lee.example.com.test.jump.BActivity" />
-                                        //LAUNCHER为默认启动
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
