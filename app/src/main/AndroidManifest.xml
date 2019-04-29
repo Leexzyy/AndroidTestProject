@@ -39,9 +39,12 @@
         <activity android:name=".recycleview.PuRecyclerViewActivity" />
         <activity android:name=".PopupWindowActivity"/>
         <activity android:name=".jump.AActivity"
-            android:label="A" />
+            android:label="A"
+            android:launchMode="singleTop" />
+        <!--android:taskAffinity="创建一个新的栈 以及站名"-->
         <activity android:name=".jump.BActivity"
-            android:label="B">
+            android:label="B"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="lee.example.com.test.jump.BActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
