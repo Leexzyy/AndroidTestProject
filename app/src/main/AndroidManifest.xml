@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActActivity"></activity>
+        <activity android:name=".fragment.ContainerActivity"></activity>
+        <activity android:name=".ActActivity" />
         <activity android:name=".LifeCycleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -37,19 +38,20 @@
         <activity android:name=".recycleview.HorRecyclerViewActivity" />
         <activity android:name=".recycleview.GridRecyclerViewActivity" />
         <activity android:name=".recycleview.PuRecyclerViewActivity" />
-        <activity android:name=".PopupWindowActivity"/>
-        <activity android:name=".jump.AActivity"
+        <activity android:name=".PopupWindowActivity" />
+        <activity
+            android:name=".jump.AActivity"
             android:label="A"
-            android:launchMode="singleTop" />
-        <!--android:taskAffinity="创建一个新的栈 以及站名"-->
-        <activity android:name=".jump.BActivity"
+            android:launchMode="singleTop" /> <!-- android:taskAffinity="创建一个新的栈 以及站名" -->
+        <activity
+            android:name=".jump.BActivity"
             android:label="B"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="lee.example.com.test.jump.BActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
     </application>
 
