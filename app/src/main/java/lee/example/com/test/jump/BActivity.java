@@ -55,8 +55,6 @@ public class BActivity extends AppCompatActivity {
                startActivity(intent);
            }
        });
-
-
     }
 
     @Override

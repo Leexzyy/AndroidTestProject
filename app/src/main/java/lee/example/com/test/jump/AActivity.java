@@ -1,6 +1,4 @@
 package lee.example.com.test.jump;
-
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -98,7 +96,7 @@ public class AActivity extends AppCompatActivity {
     protected void logtaskName(){
         try {
             ActivityInfo info = getPackageManager().getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
-            //taskAffinity 就是task关系 也可以理解为名称
+            //taskAffinity 就是task关系 也可以理解为任务栈的名称    `
             Log.d("AActivity",info.taskAffinity);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
