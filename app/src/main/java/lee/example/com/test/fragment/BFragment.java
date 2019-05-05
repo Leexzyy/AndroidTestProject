@@ -20,7 +20,7 @@ public class BFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         //相当于Activity中的setContentView(); 他的返回值为view 所以直接返回view就行
-        View view =inflater.inflate(R.layout.fragment_a,container,false);
+        View view =inflater.inflate(R.layout.fragment_b,container,false);
         return view;
     }
 

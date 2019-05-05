@@ -2,7 +2,6 @@ package lee.example.com.test.fragment;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,9 +32,10 @@ public class ContainerActivity extends AppCompatActivity {
         });
 
         //实例化AFragment
-        aFragment = new AFragment();
+//        aFragment = new AFragment();
+        aFragment = AFragment.newInstance("我是参数");
         //把AFragment添加到Activity中,记得调用commitAllowingStateLoss
         //.add方法是添加一个Fragment
-        getFragmentManager().beginTransaction().replace(R.id.fl_container,aFragment).commitAllowingStateLoss();
+        getFragmentManager().beginTransaction().add(R.id.fl_container,aFragment).commitAllowingStateLoss();
     }
 }
