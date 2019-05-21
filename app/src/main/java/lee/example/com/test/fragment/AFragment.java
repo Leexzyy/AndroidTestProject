@@ -44,6 +44,7 @@ public class AFragment extends Fragment {
     }
 
 
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -81,7 +82,7 @@ public class AFragment extends Fragment {
             public void onClick(View v) {
                 //应用getActivity方法转成ContainerActivity 再调用setData方法；
 //                ((ContainerActivity)getActivity()).setData("你好");
-                listener.onClick("你好！");
+                listener.onClick("这个是通过运用AFragment中自定义接口去实现信息的传递 还有一种方法是通过Activity的公共类去调用:(ContainerActivity)getActivity()).setData(“”);");
             }
         });
 
