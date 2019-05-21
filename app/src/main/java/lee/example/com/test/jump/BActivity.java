@@ -36,7 +36,7 @@ public class BActivity extends AppCompatActivity {
        int number =   bundle.getInt("number");
        mTvTitle.setText(name+","+number);
 
-       mBtnFinish.setOnClickListener(new View.OnClickListener() {
+        mBtnFinish.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                Intent intent = new Intent();

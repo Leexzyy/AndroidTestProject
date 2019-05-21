@@ -10,32 +10,18 @@ import lee.example.com.test.R;
 public class ContainerActivity extends AppCompatActivity {
     //实例化各个Fragment PS 可以在直接使用其他Java文件的class；
     private AFragment aFragment;
-    private  BFragment bFragment;
-
-    private Button mBtnChange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
-        mBtnChange = findViewById(R.id.btn_change);
-        mBtnChange.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            if (bFragment == null){
-                bFragment = new BFragment();
-
-            }
-                //replace为更换一个Fragment；
-                getFragmentManager().beginTransaction().replace(R.id.fl_container,bFragment).commitAllowingStateLoss();
-            }
-        });
 
         //实例化AFragment
-//        aFragment = new AFragment();
-        aFragment = AFragment.newInstance("我是参数");
+//         aFragment = new AFragment();
+        //在实列化时传一个参数（这个方法在aFragment中）
+        aFragment = AFragment.newInstance("我是参数（AFragment）");
         //把AFragment添加到Activity中,记得调用commitAllowingStateLoss
-        //.add方法是添加一个Fragment
-        getFragmentManager().beginTransaction().add(R.id.fl_container,aFragment).commitAllowingStateLoss();
+        //.add方法是添加一个Fragment  添加了一个tag a 在后面需要找到这个tag进行判断以及操作
+        getFragmentManager().beginTransaction().add(R.id.fl_container,aFragment,"a").commitAllowingStateLoss();
     }
 }
