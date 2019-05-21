@@ -16,8 +16,21 @@ import lee.example.com.test.R;
 
 public class AFragment extends Fragment {
         private TextView mTvTitle;
-        private Button mBtnChange,mBtnReset;
+        private Button mBtnChange,mBtnReset,mBtnMessage;
         private BFragment bFragment;
+        private IonMessageClick listener;
+
+// fragemt和Activity发生关系是会调用onAttach这个方法 所以可以用这个进行传递
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            //将方法里面的context强制转型到IonMessageClick接口；
+            listener = (IonMessageClick)context;
+        }catch ( ClassCastException e ){
+            throw new ClassCastException("强制转化失败 Activity必须要实现IonMessageClick接口 ");
+        }
+    }
 
     //设置布局文件！
     @Nullable
@@ -37,8 +50,7 @@ public class AFragment extends Fragment {
         mTvTitle = view.findViewById(R.id.tv_titlefragment);
         mBtnChange = view.findViewById(R.id.btn_change);
         mBtnReset = view.findViewById(R.id.btn_reset);
-
-
+        mBtnMessage = view.findViewById(R.id.btn_message);
 
         mBtnChange.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +69,6 @@ public class AFragment extends Fragment {
             }
         });
 
-
         mBtnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +76,14 @@ public class AFragment extends Fragment {
             }
         });
 
-
+        mBtnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //应用getActivity方法转成ContainerActivity 再调用setData方法；
+//                ((ContainerActivity)getActivity()).setData("你好");
+                listener.onClick("你好！");
+            }
+        });
 
 
         //将值发送到mTvTitle中
@@ -73,8 +91,6 @@ public class AFragment extends Fragment {
             mTvTitle.setText(getArguments().getString("title"));
         }
     }
-
-
 
 
     //重新构造一个newInstance的方法 用来传递参数
@@ -88,7 +104,10 @@ public class AFragment extends Fragment {
         fragment.setArguments(bundle);
         return fragment;
     }
-
+//  创建一个IonMessageClick 在Activity中实现它！
+    public interface IonMessageClick{
+        void  onClick(String text);
+    }
 
 
     //    //重新保持关系的时候会调用这个方法

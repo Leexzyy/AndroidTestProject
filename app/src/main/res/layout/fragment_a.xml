@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:gravity="center">
     <Button
+        android:id="@+id/btn_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="给Activity传递消息"
+        android:textAllCaps="false"/>
+    <Button
         android:id="@+id/btn_change"
         android:layout_width="match_parent"
         android:layout_height="50dp"
