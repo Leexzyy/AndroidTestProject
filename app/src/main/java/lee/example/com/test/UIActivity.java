@@ -11,8 +11,11 @@ import lee.example.com.test.listview.ListViewActivity;
 import lee.example.com.test.recycleview.RecyclerViewActivity;
 import lee.example.com.test.recycleview.WebViewActivity;
 
+/**
+ * @author Administrator
+ */
 public class UIActivity extends AppCompatActivity {
-    //声明
+    /**声明*/
     private Button mBtnTextView;
     private Button mBtnButton;
     private Button mBtnEdittext;
@@ -80,7 +83,7 @@ public class UIActivity extends AppCompatActivity {
 
     }
 
-    //设置监听器，每个控件设置点击事件
+    /**设置监听器，每个控件设置点击事件*/
     private void setListeners() {
         OnClick onClick = new OnClick();
         mBtnTextView.setOnClickListener(onClick);
@@ -99,7 +102,7 @@ public class UIActivity extends AppCompatActivity {
 
     }
 
-    //点击事件
+    /**点击事件*/
     private class OnClick implements View.OnClickListener {
 
 

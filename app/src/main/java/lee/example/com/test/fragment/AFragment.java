@@ -105,7 +105,10 @@ public class AFragment extends Fragment {
         fragment.setArguments(bundle);
         return fragment;
     }
-//  创建一个IonMessageClick 在Activity中实现它！
+
+    /**  创建一个IonMessageClick 在Activity中实现它！
+     *
+     */
     public interface IonMessageClick{
         void  onClick(String text);
     }
