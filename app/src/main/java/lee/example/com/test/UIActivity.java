@@ -154,6 +154,7 @@ public class UIActivity extends AppCompatActivity {
                 case R.id.btn_popupwindow:
                     intent = new Intent(UIActivity.this,PopupWindowActivity.class);
                     break;
+                default:
             }
             startActivity(intent);
 

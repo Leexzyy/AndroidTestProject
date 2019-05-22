@@ -63,6 +63,7 @@ public class ToastActivity extends AppCompatActivity {
                 //调用自己封装好的Toast
                 ToastUtil.showMsg(getApplicationContext(),"包装过的toast，不会排队显示Toast");
                 break;
+            default:
         }
         }
     }

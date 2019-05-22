@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_ui:
                     intent = new Intent(MainActivity.this,UIActivity.class);
                     break;
+                default:
             }
             startActivity(intent);
         }

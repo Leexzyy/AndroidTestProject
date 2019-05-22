@@ -37,10 +37,12 @@ public class ActActivity extends AppCompatActivity {
     }
     //点击事件
 
+    @SuppressWarnings("AlibabaSwitchStatement")
     private class OnClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             Intent intent = null;
+            //noinspection AlibabaSwitchStatement
             switch (v.getId()){
 
                 case R.id.btn_lifecycle:
@@ -52,6 +54,7 @@ public class ActActivity extends AppCompatActivity {
                 case R.id.btn_fragment:
                     intent = new Intent(ActActivity.this, ContainerActivity.class);
                     break;
+                default:
             }
             startActivity(intent);
 
