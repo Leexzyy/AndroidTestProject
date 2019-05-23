@@ -10,7 +10,7 @@ import com.didichuxing.doraemonkit.DoraemonKit;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnAct;
+    private Button mBtnAct,mBtnEvrnt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mBtnUI = findViewById(R.id.btn_ui);
         mBtnAct = findViewById(R.id.btn_act);
+        mBtnEvrnt = findViewById(R.id.btn_event);
 
         DoraemonKit.install(getApplication());
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
         mBtnAct.setOnClickListener(onClick);
+        mBtnEvrnt.setOnClickListener(onClick);
     }
     class OnClick implements View.OnClickListener{
 
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_ui:
                     intent = new Intent(MainActivity.this,UIActivity.class);
+                    break;
+                case R.id.btn_event:
+                    intent = new Intent(MainActivity.this,EventActivity.class);
                     break;
                 default:
             }

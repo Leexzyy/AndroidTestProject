@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.ContainerActivity"></activity>
+        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".fragment.ContainerActivity" />
         <activity android:name=".ActActivity" />
         <activity android:name=".LifeCycleActivity" />
         <activity android:name=".MainActivity">

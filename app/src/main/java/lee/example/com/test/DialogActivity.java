@@ -124,12 +124,14 @@ public class DialogActivity extends AppCompatActivity {
                     EditText etUserName = view.findViewById(R.id.et_username);
                     EditText etPassWord = view.findViewById(R.id.et_password);
                     Button btnLogin = view.findViewById(R.id.btn_login);
-//                    btnLogin.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            //
-//                        }
-//                    });
+/*
+btnLogin.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+//
+}
+});
+*/
                     builder5.setTitle("请先登录").setView(view).show();
                     break;
                 default:
