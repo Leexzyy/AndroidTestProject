@@ -1,5 +1,6 @@
 package lee.example.com.test.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
@@ -71,9 +72,10 @@ public class AFragment extends Fragment {
         });
 
         mBtnReset.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                mTvTitle.setText("我是新文字！(首先在BFragment中直接按返回键的话会回退到上一个Activity界面中 所以需要在BFrament中添加addToBackStack（）方法，但是返回之后这段文字会消失所以需要判断是否有AFragment的tag 如果有就隐藏 然后add BFragment)");
+                mTvTitle.setText("我是新文字！(  所以需要在BFrament中添加addToBackStack（）方法，但是返回之后这段文字会消失所以需要判断是否有AFragment的tag 如果有就隐藏 然后add BFragment)");
             }
         });
 

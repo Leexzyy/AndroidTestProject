@@ -22,7 +22,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
     private  OnItemClickListener mListener;
 
     public HorAdapter(Context context, OnItemClickListener listener) {
-        this.mContext = context;
+            this.mContext = context;
         this.mListener= listener;
     }
 

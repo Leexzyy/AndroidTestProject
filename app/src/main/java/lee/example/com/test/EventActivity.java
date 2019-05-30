@@ -39,7 +39,6 @@ public class EventActivity extends AppCompatActivity  implements View.OnClickLis
                 ToastUtil.showMsg(EventActivity.this,"通过activity实现事件（通过事件源所在的类实现）");
                 break;
             default:
-
         }
     }
 
@@ -52,12 +51,20 @@ public class EventActivity extends AppCompatActivity  implements View.OnClickLis
                 case R.id.btn_eve:
                     ToastUtil.showMsg(EventActivity.this,"通过内部类实现事件。。。。");
                     break;
-
-
                     default:
 
             }
 
         }
     }
+
+//    //通过控件的onClick属性实现onClick事件
+//    public void show(View v){
+//        switch (v.getId()){
+//            case R.id.btn_event:
+//                ToastUtil.showMsg(EventActivity.this,"通过内部类实现事件。。。。");
+//                break;
+//                default:
+//        }
+//    }
 }
