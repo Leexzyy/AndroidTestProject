@@ -14,4 +14,12 @@
         />
     <!--android:onClick="show"-->
 
+    <!--自定义一个的Button-->
+   <lee.example.com.test.widget.MyButton
+       android:id="@+id/btn_my"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="基于回调的事件处理机制"
+       android:textAllCaps="false"/>
+
 </LinearLayout>

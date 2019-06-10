@@ -5,8 +5,8 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-import lee.example.com.test.PieView.PieData;
-import lee.example.com.test.PieView.PieView;
+import lee.example.com.test.pieview.PieData;
+import lee.example.com.test.pieview.PieView;
 
 public class PieViewActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package lee.example.com.test.PieView;
+package lee.example.com.test.pieview;
 
 import android.support.annotation.NonNull;
 

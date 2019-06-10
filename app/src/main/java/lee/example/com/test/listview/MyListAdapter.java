@@ -75,7 +75,7 @@ public class MyListAdapter extends BaseAdapter {
         holder.tvTitle.setText("这是标题");
         holder.tvTime.setText("2088-08-08");
         holder.tvContent.setText("这是内容");
-        Glide.with(mContext).load("https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png").into(holder.imageView);
+        Glide.with(mContext).load("https://github.com/fluidicon.png").into(holder.imageView);
 
         return convertView;
     }
