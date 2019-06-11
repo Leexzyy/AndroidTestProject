@@ -3,14 +3,19 @@ package lee.example.com.test;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 
+import lee.example.com.test.util.ToastUtil;
+
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
     private Button mBtnAct,mBtnEvrnt,mBtnView;
+    private long exitTime = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +56,18 @@ public class MainActivity extends AppCompatActivity {
             }
             startActivity(intent);
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() ==KeyEvent.ACTION_DOWN){
+            if ((System.currentTimeMillis()-exitTime> 2000)){
+                ToastUtil.showMsg(MainActivity.this,"再按一次退出程序");
+                exitTime = System.currentTimeMillis();
+            }else {
+                    finish();
+                    System.exit(0);
+            }
+        }return true;
     }
 }
