@@ -27,7 +27,7 @@
         </activity>
         <activity android:name=".DialogActivity" />
         <activity android:name=".ToastActivity" />
-        <activity android:name=".recycleview.WebViewActivity" />
+        <activity android:name=".WebViewActivity" />
         <activity android:name=".UIActivity" />
         <activity android:name=".TextViewActivity" />
         <activity android:name=".ButtenActivity" />

@@ -1,4 +1,4 @@
-package lee.example.com.test.recycleview;
+package lee.example.com.test;
 
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
@@ -61,7 +61,7 @@ public class WebViewActivity extends AppCompatActivity {
             Log.d("WebView","onPageFinished....");
             //可以调用js代码的两种方式
            // mWebView.loadUrl("javascript:alert('js弹窗代码Leexzyy')");
-            mWebView.evaluateJavascript("javascript:alert('js弹窗代码Leexzyy-----网页以加载完')",null);
+            mWebView.evaluateJavascript("javascript:alert('js弹窗代码Leexzyy-----网页已加载完')",null);
 
         }
     }

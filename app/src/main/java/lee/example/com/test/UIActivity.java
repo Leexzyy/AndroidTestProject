@@ -9,7 +9,6 @@ import android.widget.Button;
 import lee.example.com.test.gridview.GridViewActivity;
 import lee.example.com.test.listview.ListViewActivity;
 import lee.example.com.test.recycleview.RecyclerViewActivity;
-import lee.example.com.test.recycleview.WebViewActivity;
 
 /**
  * @author Administrator
