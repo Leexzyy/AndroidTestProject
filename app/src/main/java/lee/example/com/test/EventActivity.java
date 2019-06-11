@@ -10,6 +10,10 @@ import android.widget.Button;
 import lee.example.com.test.util.ToastUtil;
 import lee.example.com.test.widget.MyButton;
 
+/**
+ * @author Administrator
+ * 此Activity包含监听事件的
+ */
 public class EventActivity extends AppCompatActivity  implements View.OnClickListener {
     private Button mBtnEve;
     private MyButton btnMy;
@@ -20,8 +24,6 @@ public class EventActivity extends AppCompatActivity  implements View.OnClickLis
         setContentView(R.layout.activity_event);
         mBtnEve = findViewById(R.id.btn_eve);
         btnMy = findViewById(R.id.btn_my);
-
-
         /**从log中可以发现会优先执行监听里面的回调方法 然后在执行Button内部的方法  然后再执行Activity里面的回调方法**/
         btnMy.setOnTouchListener(new View.OnTouchListener() {
             @Override

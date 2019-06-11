@@ -29,6 +29,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mToast;
     private Button mDialog;
     private Button mPopup;
+    private Button mBtnConstrain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,38 +50,8 @@ public class UIActivity extends AppCompatActivity {
         mToast = findViewById(R.id.btn_toast);
         mDialog = findViewById(R.id.btn_dialog);
         mPopup = findViewById(R.id.btn_popupwindow);
+        mBtnConstrain = findViewById(R.id.btn_constrainlayout);
         setListeners();
-//        mBtnTextView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //跳转到TextView
-//                Intent intent = new Intent(UIActivity.this,TextViewActivity.class);
-//               startActivities(new Intent[]{intent});
-//            }
-//        });
-
-
-//        mBtnButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //跳转到Butten界面
-//                Intent intent = new Intent(UIActivity.this,ButtenActivity.class);
-//                startActivities(new Intent[]{intent});
-//
-//            }
-//        });
-
-
-//        mBtnEdittext.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //跳转到Edittext界面
-//                Intent intent = new Intent(UIActivity.this,EditTextActivity.class);
-//                startActivities(new Intent[]{intent});
-//            }
-//        });
-
-
     }
 
     /**设置监听器，每个控件设置点击事件*/
@@ -99,6 +70,7 @@ public class UIActivity extends AppCompatActivity {
         mToast.setOnClickListener(onClick);
         mDialog.setOnClickListener(onClick);
         mPopup.setOnClickListener(onClick);
+        mBtnConstrain.setOnClickListener(onClick);
 
     }
 
@@ -156,6 +128,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_popupwindow:
                     intent = new Intent(UIActivity.this,PopupWindowActivity.class);
+                    break;
+                case R.id.btn_constrainlayout:
+                    intent = new Intent(UIActivity.this,ConstraintLayoutActivity.class);
                     break;
                 default:
             }
