@@ -107,7 +107,7 @@ public class UIActivity extends AppCompatActivity {
                     intent = new Intent(UIActivity.this, ImageViewActivity.class);
                     break;
                 case R.id.btn_listview:
-                    ////跳转到ListView界面
+                    //跳转到ListView界面
                     intent = new Intent(UIActivity.this, ListViewActivity.class);
                     break;
                 case R.id.btn_gridview:

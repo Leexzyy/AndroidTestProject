@@ -24,6 +24,15 @@ public class EventActivity extends AppCompatActivity  implements View.OnClickLis
         setContentView(R.layout.activity_event);
         mBtnEve = findViewById(R.id.btn_eve);
         btnMy = findViewById(R.id.btn_my);
+
+        btnMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("listener", "----onClick----");
+            }
+        });
+
+
         /**从log中可以发现会优先执行监听里面的回调方法 然后在执行Button内部的方法  然后再执行Activity里面的回调方法**/
         btnMy.setOnTouchListener(new View.OnTouchListener() {
             @Override
