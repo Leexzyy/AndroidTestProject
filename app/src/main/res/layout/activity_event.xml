@@ -21,5 +21,11 @@
        android:layout_height="wrap_content"
        android:text="基于回调的事件处理机制"
        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Handler"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

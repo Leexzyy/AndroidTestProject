@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ConstraintLayoutActivity"></activity>
+        <activity android:name=".HandlerActivity"></activity>
+        <activity android:name=".ConstraintLayoutActivity" />
         <activity android:name=".ViewActivity" />
         <activity android:name=".PieViewActivity" />
         <activity android:name=".EventActivity" />

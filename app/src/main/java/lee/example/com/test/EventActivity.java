@@ -1,5 +1,6 @@
 package lee.example.com.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +16,7 @@ import lee.example.com.test.widget.MyButton;
  * 此Activity包含监听事件的
  */
 public class EventActivity extends AppCompatActivity  implements View.OnClickListener {
-    private Button mBtnEve;
+    private Button mBtnEve,mBtnHandler;
     private MyButton btnMy;
 //当同一个事件源设置了多个监听器 系统只会执行最后一个监听器
     @Override
@@ -24,6 +25,15 @@ public class EventActivity extends AppCompatActivity  implements View.OnClickLis
         setContentView(R.layout.activity_event);
         mBtnEve = findViewById(R.id.btn_eve);
         btnMy = findViewById(R.id.btn_my);
+        mBtnHandler = findViewById(R.id.btn_handler);
+
+        mBtnHandler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(EventActivity.this,HandlerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnMy.setOnClickListener(new View.OnClickListener() {
             @Override
