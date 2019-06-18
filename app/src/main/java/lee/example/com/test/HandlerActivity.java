@@ -28,6 +28,8 @@ public class HandlerActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             }, 3000);
+
+
                 mHandler = new Handler(){
                     @Override
                     public void handleMessage(Message msg) {
@@ -40,6 +42,7 @@ public class HandlerActivity extends AppCompatActivity {
                         }
                     }
                 };
+
                 new Thread(){
                     @Override
                     public void run() {

@@ -9,11 +9,12 @@ import android.widget.Button;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 
+import lee.example.com.test.datastorage.DataStorageActivity;
 import lee.example.com.test.util.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnAct,mBtnEvrnt,mBtnView;
+    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData;
     private long exitTime = 0;
 
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnAct = findViewById(R.id.btn_act);
         mBtnEvrnt = findViewById(R.id.btn_event);
         mBtnView = findViewById(R.id.btn_view);
+        mBtnData = findViewById(R.id.btn_data);
 
 
         DoraemonKit.install( getApplication());
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnAct.setOnClickListener(onClick);
         mBtnEvrnt.setOnClickListener(onClick);
         mBtnView.setOnClickListener(onClick);
+        mBtnData.setOnClickListener(onClick);
     }
     class OnClick implements View.OnClickListener{
 
@@ -51,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_view:
                     intent = new Intent(MainActivity.this,ViewActivity.class);
+                    break;
+                case R.id.btn_data:
+                    intent = new Intent(MainActivity.this, DataStorageActivity.class);
                     break;
                 default:
             }
