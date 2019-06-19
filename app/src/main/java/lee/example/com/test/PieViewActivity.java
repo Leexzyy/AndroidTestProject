@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import lee.example.com.test.pieview.PieData;
 import lee.example.com.test.pieview.PieView;
 
+/**
+ * @author Administrator
+ */
 public class PieViewActivity extends AppCompatActivity {
 
     @Override
@@ -24,9 +27,6 @@ public class PieViewActivity extends AppCompatActivity {
         PieData pieData3 = new PieData("Lee",40);
         PieData pieData4 = new PieData("Lee",20);
         PieData pieData5 = new PieData("Lee",20);
-
-
-
         datas.add(pieData);
         datas.add(pieData2);
         datas.add(pieData3);
