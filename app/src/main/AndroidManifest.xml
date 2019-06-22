@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".datastorage.SharedPreferencesActivity"></activity>
+        <activity android:name=".datastorage.FileActivity"></activity>
+        <activity android:name=".datastorage.SharedPreferencesActivity" />
         <activity android:name=".datastorage.DataStorageActivity" />
         <activity android:name=".HandlerActivity" />
         <activity android:name=".ConstraintLayoutActivity" />

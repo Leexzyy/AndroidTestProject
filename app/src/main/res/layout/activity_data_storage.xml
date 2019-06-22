@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="SharedPreferences"
         android:textAllCaps="false"/>
+    
     <Button
         android:id="@+id/btn_file"
         android:layout_width="match_parent"
