@@ -9,12 +9,13 @@ import android.widget.Button;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 
+import lee.example.com.test.broadcast_receiver.BroadcastActivity;
 import lee.example.com.test.datastorage.DataStorageActivity;
 import lee.example.com.test.util.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData;
+    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast;
     private long exitTime = 0;
 
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEvrnt = findViewById(R.id.btn_event);
         mBtnView = findViewById(R.id.btn_view);
         mBtnData = findViewById(R.id.btn_data);
+        mBtnBroadcast = findViewById(R.id.btn_broadcast);
 
 
         DoraemonKit.install( getApplication());
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEvrnt.setOnClickListener(onClick);
         mBtnView.setOnClickListener(onClick);
         mBtnData.setOnClickListener(onClick);
+        mBtnBroadcast.setOnClickListener(onClick);
     }
     class OnClick implements View.OnClickListener{
 
@@ -58,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_data:
                     intent = new Intent(MainActivity.this, DataStorageActivity.class);
                     break;
+                case R.id.btn_broadcast:
+                    intent = new Intent(MainActivity.this, BroadcastActivity.class);
                 default:
             }
             startActivity(intent);
