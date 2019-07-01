@@ -4,7 +4,8 @@
     package="lee.example.com.test">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:allowBackup="true"
@@ -14,7 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".broadcast_receiver.BroadcastActivity"></activity>
+        <receiver
+            android:name=".broadcast_receiver.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".broadcast_receiver.BroadcastActivity" />
         <activity android:name=".datastorage.FileActivity" />
         <activity android:name=".datastorage.SharedPreferencesActivity" />
         <activity android:name=".datastorage.DataStorageActivity" />
