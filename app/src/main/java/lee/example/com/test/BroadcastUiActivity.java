@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import lee.example.com.test.broadcast_receiver.BroadcastActivity;
+import lee.example.com.test.broadcast_receiver.LoginActivity;
 
 /**
  * @author Administrator\
@@ -16,7 +17,7 @@ import lee.example.com.test.broadcast_receiver.BroadcastActivity;
  *4、当广播为有序广播时在MyBroadcastReceiver中被截断
  */
 public class BroadcastUiActivity extends AppCompatActivity {
-    private Button mBtnReceive,mBtnSend;
+    private Button mBtnReceive,mBtnSend,mBtnOffline;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,15 @@ public class BroadcastUiActivity extends AppCompatActivity {
 //                sendBroadcast(intent);
                 //发送有序广播
                 sendOrderedBroadcast(intent,null);
+            }
+        });
+
+        mBtnOffline = findViewById(R.id.btn_offline);
+        mBtnOffline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BroadcastUiActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

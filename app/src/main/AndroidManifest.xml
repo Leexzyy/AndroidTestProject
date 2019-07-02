@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BroadcastUiActivity"></activity>
+        <activity android:name=".broadcast_receiver.LoginSuccessActivity"></activity>
+        <activity android:name=".broadcast_receiver.LoginActivity" />
 
         <receiver
             android:name=".broadcast_receiver.MyBroadcastReceiver"
@@ -37,6 +38,7 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".BroadcastUiActivity" />
         <activity android:name=".broadcast_receiver.BroadcastActivity" />
         <activity android:name=".datastorage.FileActivity" />
         <activity android:name=".datastorage.SharedPreferencesActivity" />
