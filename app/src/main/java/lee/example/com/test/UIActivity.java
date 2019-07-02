@@ -88,7 +88,7 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_butten:
                     //跳转到Butten界面
-                    intent = new Intent(UIActivity.this, ButtenActivity.class);
+                    intent = new Intent(UIActivity.this, ButtonActivity.class);
                     break;
                 case R.id.btn_edittext:
                     //跳转到EditText界面

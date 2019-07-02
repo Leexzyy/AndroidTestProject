@@ -24,7 +24,7 @@ public class HandlerActivity extends AppCompatActivity {
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(HandlerActivity.this,ButtenActivity.class);
+                    Intent intent = new Intent(HandlerActivity.this, ButtonActivity.class);
                     startActivity(intent);
                 }
             }, 3000);

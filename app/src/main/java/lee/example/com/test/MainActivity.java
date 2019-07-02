@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, DataStorageActivity.class);
                     break;
                 case R.id.btn_broadcast:
-                    intent = new Intent(MainActivity.this, BroadcastActivity.class);
+                    intent = new Intent(MainActivity.this, BroadcastUiActivity.class);
                 default:
             }
             startActivity(intent);

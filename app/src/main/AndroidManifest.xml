@@ -15,14 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".BroadcastUiActivity"></activity>
+
         <receiver
             android:name=".broadcast_receiver.MyBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
-            <!--这里让MyBroadcastReceiver接收一条值为lee.example.com.test.MY_BROADCAST的广播-->
-            <!--有序广播的priority优先级为100-->
+
+            <!-- 这里让MyBroadcastReceiver接收一条值为lee.example.com.test.MY_BROADCAST的广播 -->
+            <!-- 有序广播的priority优先级为100 -->
             <intent-filter android:priority="100">
-                <action android:name="lee.example.com.test.MY_BROADCAST"/>
+                <action android:name="lee.example.com.test.MY_BROADCAST" />
             </intent-filter>
         </receiver>
         <receiver
@@ -58,7 +61,7 @@
         <activity android:name=".WebViewActivity" />
         <activity android:name=".UIActivity" />
         <activity android:name=".TextViewActivity" />
-        <activity android:name=".ButtenActivity" />
+        <activity android:name=".ButtonActivity" />
         <activity android:name=".EditTextActivity" />
         <activity android:name=".RadioButtonActivity" />
         <activity android:name=".CheckBoxActivity" />
