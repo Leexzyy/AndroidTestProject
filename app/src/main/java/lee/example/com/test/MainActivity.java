@@ -1,5 +1,6 @@
 package lee.example.com.test;
 
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,13 +10,14 @@ import android.widget.Button;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 
-import lee.example.com.test.broadcast_receiver.BroadcastActivity;
+import lee.example.com.test.broadcast_receiver.BroadcastUiActivity;
 import lee.example.com.test.datastorage.DataStorageActivity;
+import lee.example.com.test.notification.NotificationActivity;
 import lee.example.com.test.util.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast;
+    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast,mBtnNotification;
     private long exitTime = 0;
 
 
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnView = findViewById(R.id.btn_view);
         mBtnData = findViewById(R.id.btn_data);
         mBtnBroadcast = findViewById(R.id.btn_broadcast);
+        mBtnNotification = findViewById(R.id.btn_notification);
 
 
         DoraemonKit.install( getApplication());
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnView.setOnClickListener(onClick);
         mBtnData.setOnClickListener(onClick);
         mBtnBroadcast.setOnClickListener(onClick);
+        mBtnNotification.setOnClickListener(onClick);
     }
     class OnClick implements View.OnClickListener{
 
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_broadcast:
                     intent = new Intent(MainActivity.this, BroadcastUiActivity.class);
+                case R.id.btn_notification:
+                    intent = new Intent(MainActivity.this, NotificationActivity.class);
                 default:
             }
             startActivity(intent);

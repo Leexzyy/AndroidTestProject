@@ -1,4 +1,4 @@
-package lee.example.com.test;
+package lee.example.com.test.broadcast_receiver;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import lee.example.com.test.broadcast_receiver.BroadcastActivity;
-import lee.example.com.test.broadcast_receiver.LoginActivity;
+import lee.example.com.test.R;
 
 /**
  * @author Administrator\
@@ -37,9 +36,9 @@ public class BroadcastUiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent("lee.example.com.test.MY_BROADCAST");
                 //发送标准广播
-//                sendBroadcast(intent);
+                sendBroadcast(intent);
                 //发送有序广播
-                sendOrderedBroadcast(intent,null);
+//                sendOrderedBroadcast(intent,null);
             }
         });
 

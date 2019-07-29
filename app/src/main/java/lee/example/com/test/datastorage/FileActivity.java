@@ -13,6 +13,10 @@ import java.io.IOException;
 
 import lee.example.com.test.R;
 
+/**
+ * @author Administrator
+ * 利用File存储内容
+ */
 public class FileActivity extends AppCompatActivity {
     private EditText mEtFileName;
     private Button mBtnFileSave,mBtnFileShow;
@@ -44,7 +48,7 @@ public class FileActivity extends AppCompatActivity {
         });
 
     }
-    //【1】先自定义一个方法用来存储数据
+    /**【1】先自定义一个方法用来存储数据*/
     private void save(String content){
         //申明变量
         FileOutputStream fileOutputStream = null;
@@ -68,7 +72,7 @@ public class FileActivity extends AppCompatActivity {
             }
         }
     }
-    //【2】在定义一个方法用来读取数据
+    /**【2】在定义一个方法用来读取数据*/
     private String read(){
         //申明变量
         FileInputStream fileInputStream = null;
@@ -94,7 +98,7 @@ public class FileActivity extends AppCompatActivity {
         }
         //最后记得关掉！
         finally {
-            if (fileInputStream !=null){
+            if (fileInputStream !=null) {
                 try {
                     fileInputStream.close();
                 } catch (IOException e) {

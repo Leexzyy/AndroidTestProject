@@ -18,7 +18,7 @@ public class SharedPreferencesActivity extends AppCompatActivity {
     private Button mBtnSave,mBtnShow;
     private TextView mTvContent;
 
-    //申明SharedPreferences和editor （SharedPreferences）是读 ，（SharedPreferences.Editor）是写！
+    /**申明SharedPreferences和editor （SharedPreferences）是读 ，（SharedPreferences.Editor）是写！*/
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
 

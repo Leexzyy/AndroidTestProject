@@ -37,7 +37,6 @@ public class ActActivity extends AppCompatActivity {
     }
     //点击事件
 
-    @SuppressWarnings("AlibabaSwitchStatement")
     private class OnClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
