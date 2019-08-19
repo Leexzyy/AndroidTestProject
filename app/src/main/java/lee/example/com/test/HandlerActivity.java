@@ -1,5 +1,6 @@
 package lee.example.com.test;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
@@ -15,6 +16,7 @@ public class HandlerActivity extends AppCompatActivity {
 
     private Handler mHandler;
 
+    @SuppressLint("HandlerLeak")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

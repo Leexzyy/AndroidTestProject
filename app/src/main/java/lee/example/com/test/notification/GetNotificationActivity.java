@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 import lee.example.com.test.R;
 
+/**
+ * @author Administrator
+ * 这是点击通知之后进去的GetNotificationActivity
+ */
 public class GetNotificationActivity extends AppCompatActivity {
 
     @Override

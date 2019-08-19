@@ -1,6 +1,5 @@
 package lee.example.com.test;
 
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +9,7 @@ import android.widget.Button;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 
+import lee.example.com.test.camera.CameraAlbumActivity;
 import lee.example.com.test.broadcast_receiver.BroadcastUiActivity;
 import lee.example.com.test.datastorage.DataStorageActivity;
 import lee.example.com.test.notification.NotificationActivity;
@@ -17,7 +17,7 @@ import lee.example.com.test.util.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast,mBtnNotification;
+    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast,mBtnNotification,mBtnCamera;
     private long exitTime = 0;
 
 
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnData = findViewById(R.id.btn_data);
         mBtnBroadcast = findViewById(R.id.btn_broadcast);
         mBtnNotification = findViewById(R.id.btn_notification);
+        mBtnCamera = findViewById(R.id.btn_camera);
 
 
         DoraemonKit.install( getApplication());
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnData.setOnClickListener(onClick);
         mBtnBroadcast.setOnClickListener(onClick);
         mBtnNotification.setOnClickListener(onClick);
+        mBtnCamera.setOnClickListener(onClick);
     }
     class OnClick implements View.OnClickListener{
 
@@ -67,8 +69,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_broadcast:
                     intent = new Intent(MainActivity.this, BroadcastUiActivity.class);
+                    break;
                 case R.id.btn_notification:
                     intent = new Intent(MainActivity.this, NotificationActivity.class);
+                    break;
+                case R.id.btn_camera:
+                    intent = new Intent(MainActivity.this, CameraAlbumActivity.class);
+                    break;
                 default:
             }
             startActivity(intent);
@@ -78,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() ==KeyEvent.ACTION_DOWN){
-            if ((System.currentTimeMillis()-exitTime> 2000)){
+            int s = 2000;
+            if ((System.currentTimeMillis()-exitTime> s)){
                 ToastUtil.showMsg(MainActivity.this,"再按一次退出程序");
                 exitTime = System.currentTimeMillis();
             }else {

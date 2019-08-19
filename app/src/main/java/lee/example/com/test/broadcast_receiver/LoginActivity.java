@@ -1,13 +1,12 @@
 package lee.example.com.test.broadcast_receiver;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import lee.example.com.test.Collector.BaseActivity;
+import lee.example.com.test.collector.BaseActivity;
 import lee.example.com.test.R;
 import lee.example.com.test.util.ToastUtil;
 

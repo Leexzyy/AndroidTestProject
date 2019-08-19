@@ -1,4 +1,4 @@
-package lee.example.com.test.Collector;
+package lee.example.com.test.collector;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
