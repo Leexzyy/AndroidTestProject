@@ -1,4 +1,4 @@
-package lee.example.com.test.datastorage;
+package lee.example.com.test.main;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import lee.example.com.test.R;
+import lee.example.com.test.datastorage.FileActivity;
+import lee.example.com.test.datastorage.SharedPreferencesActivity;
 
 public class DataStorageActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mBtnSharedPreferences,mBtnFile;
@@ -26,10 +28,10 @@ public class DataStorageActivity extends AppCompatActivity implements View.OnCli
         Intent intent = null;
         switch (v.getId()){
             case R.id.btn_sharedpreferences:
-                intent = new Intent(DataStorageActivity.this,SharedPreferencesActivity.class);
+                intent = new Intent(DataStorageActivity.this, SharedPreferencesActivity.class);
                 break;
             case R.id.btn_file:
-                intent = new Intent(DataStorageActivity.this,FileActivity.class);
+                intent = new Intent(DataStorageActivity.this, FileActivity.class);
                 break;
                 default:
         }

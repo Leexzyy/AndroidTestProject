@@ -1,4 +1,4 @@
-package lee.example.com.test;
+package lee.example.com.test.main;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,15 +9,18 @@ import android.widget.Button;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 
+import lee.example.com.test.R;
 import lee.example.com.test.camera.CameraAlbumActivity;
-import lee.example.com.test.broadcast_receiver.BroadcastUiActivity;
-import lee.example.com.test.datastorage.DataStorageActivity;
-import lee.example.com.test.notification.NotificationActivity;
+import lee.example.com.test.glideimage.GlideImageActivity;
 import lee.example.com.test.util.ToastUtil;
 
+/**
+ * @author Administrator
+ * app的入口方法
+ */
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast,mBtnNotification,mBtnCamera;
+    private Button mBtnAct,mBtnEvrnt,mBtnView,mBtnData,mBtnBroadcast,mBtnNotification,mBtnCamera,mBtnGlide;
     private long exitTime = 0;
 
 
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnBroadcast = findViewById(R.id.btn_broadcast);
         mBtnNotification = findViewById(R.id.btn_notification);
         mBtnCamera = findViewById(R.id.btn_camera);
+        mBtnGlide = findViewById(R.id.btn_glide);
 
 
         DoraemonKit.install( getApplication());
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnBroadcast.setOnClickListener(onClick);
         mBtnNotification.setOnClickListener(onClick);
         mBtnCamera.setOnClickListener(onClick);
+        mBtnGlide.setOnClickListener(onClick);
     }
     class OnClick implements View.OnClickListener{
 
@@ -59,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this,UIActivity.class);
                     break;
                 case R.id.btn_event:
-                    intent = new Intent(MainActivity.this,EventActivity.class);
+                    intent = new Intent(MainActivity.this, EventActivity.class);
                     break;
                 case R.id.btn_view:
                     intent = new Intent(MainActivity.this,ViewActivity.class);
@@ -75,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_camera:
                     intent = new Intent(MainActivity.this, CameraAlbumActivity.class);
+                    break;
+                case R.id.btn_glide:
+                    intent = new Intent(MainActivity.this, GlideImageActivity.class);
                     break;
                 default:
             }

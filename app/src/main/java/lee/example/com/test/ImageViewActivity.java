@@ -6,6 +6,10 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
+/**
+ * @author Administrator
+ *使用Glide 加载图片 在photo/GlideActivity有详细的用法使用
+ */
 public class ImageViewActivity extends AppCompatActivity {
     private ImageView mIv4;
 

@@ -1,4 +1,4 @@
-package lee.example.com.test;
+package lee.example.com.test.main;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import lee.example.com.test.fragment.AFragment;
+import lee.example.com.test.LifeCycleActivity;
+import lee.example.com.test.R;
 import lee.example.com.test.fragment.ContainerActivity;
 import lee.example.com.test.jump.AActivity;
 
@@ -45,7 +46,7 @@ public class ActActivity extends AppCompatActivity {
             switch (v.getId()){
 
                 case R.id.btn_lifecycle:
-                    intent = new Intent(ActActivity.this,LifeCycleActivity.class);
+                    intent = new Intent(ActActivity.this, LifeCycleActivity.class);
                     break;
                 case R.id.btn_jump:
                     intent = new Intent(ActActivity.this, AActivity.class);

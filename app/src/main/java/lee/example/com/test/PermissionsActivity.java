@@ -7,12 +7,14 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+
+import lee.example.com.test.main.ActActivity;
+import lee.example.com.test.main.MainActivity;
 
 /**
  * @author Administrator
@@ -77,7 +79,7 @@ public class PermissionsActivity extends ActActivity implements ActivityCompat.O
     }
 
     private void closePermissionsActivity() {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         this.finish();
     }

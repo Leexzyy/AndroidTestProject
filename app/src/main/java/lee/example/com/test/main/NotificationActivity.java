@@ -1,4 +1,4 @@
-package lee.example.com.test.notification;
+package lee.example.com.test.main;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -17,6 +17,7 @@ import android.widget.Button;
 import java.io.File;
 
 import lee.example.com.test.R;
+import lee.example.com.test.notification.GetNotificationActivity;
 
 /**
  * @author Administrator
@@ -42,7 +43,7 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
                 /*
                  *新加内容  设置通知点击传递Activity
                  * */
-                Intent intent = new Intent(this,GetNotificationActivity.class);
+                Intent intent = new Intent(this, GetNotificationActivity.class);
                 PendingIntent pi = PendingIntent.getActivity(this, 0, intent, 0);
 
 

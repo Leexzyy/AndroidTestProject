@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import lee.example.com.test.ActActivity;
+import lee.example.com.test.main.ActActivity;
 import lee.example.com.test.R;
 
 public class BActivity extends AppCompatActivity {

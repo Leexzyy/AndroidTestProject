@@ -1,4 +1,4 @@
-package lee.example.com.test.broadcast_receiver;
+package lee.example.com.test.main;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import lee.example.com.test.R;
+import lee.example.com.test.broadcast_receiver.BroadcastActivity;
+import lee.example.com.test.broadcast_receiver.LoginActivity;
 
 /**
  * @author Administrator\

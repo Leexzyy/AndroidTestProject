@@ -1,4 +1,4 @@
-package lee.example.com.test;
+package lee.example.com.test.main;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import lee.example.com.test.ButtonActivity;
+import lee.example.com.test.CheckBoxActivity;
+import lee.example.com.test.ConstraintLayoutActivity;
+import lee.example.com.test.DialogActivity;
+import lee.example.com.test.EditTextActivity;
+import lee.example.com.test.ImageViewActivity;
+import lee.example.com.test.PopupWindowActivity;
+import lee.example.com.test.R;
+import lee.example.com.test.RadioButtonActivity;
+import lee.example.com.test.TextViewActivity;
+import lee.example.com.test.ToastActivity;
+import lee.example.com.test.WebViewActivity;
 import lee.example.com.test.gridview.GridViewActivity;
 import lee.example.com.test.listview.ListViewActivity;
 import lee.example.com.test.recycleview.RecyclerViewActivity;
@@ -117,19 +129,19 @@ public class UIActivity extends AppCompatActivity {
                     intent = new Intent(UIActivity.this,RecyclerViewActivity.class);
                     break;
                 case R.id.btn_webview:
-                    intent = new Intent(UIActivity.this,WebViewActivity.class);
+                    intent = new Intent(UIActivity.this, WebViewActivity.class);
                     break;
                 case R.id.btn_toast:
-                    intent = new Intent(UIActivity.this,ToastActivity.class);
+                    intent = new Intent(UIActivity.this, ToastActivity.class);
                     break;
                 case R.id.btn_dialog:
-                    intent = new Intent(UIActivity.this,DialogActivity.class);
+                    intent = new Intent(UIActivity.this, DialogActivity.class);
                     break;
                 case R.id.btn_popupwindow:
-                    intent = new Intent(UIActivity.this,PopupWindowActivity.class);
+                    intent = new Intent(UIActivity.this, PopupWindowActivity.class);
                     break;
                 case R.id.btn_constrainlayout:
-                    intent = new Intent(UIActivity.this,ConstraintLayoutActivity.class);
+                    intent = new Intent(UIActivity.this, ConstraintLayoutActivity.class);
                     break;
                 default:
             }

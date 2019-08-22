@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".glideimage.GlideImageActivity"></activity>
         <activity android:name=".PermissionsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,7 @@
         </activity>
         <activity android:name=".camera.CameraAlbumActivity" />
         <activity android:name=".notification.GetNotificationActivity" />
-        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".main.NotificationActivity" />
         <activity android:name=".broadcast_receiver.LoginSuccessActivity" />
         <activity android:name=".broadcast_receiver.LoginActivity" />
 
@@ -61,24 +62,24 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".broadcast_receiver.BroadcastUiActivity" />
+        <activity android:name=".main.BroadcastUiActivity" />
         <activity android:name=".broadcast_receiver.BroadcastActivity" />
         <activity android:name=".datastorage.FileActivity" />
         <activity android:name=".datastorage.SharedPreferencesActivity" />
-        <activity android:name=".datastorage.DataStorageActivity" />
+        <activity android:name=".main.DataStorageActivity" />
         <activity android:name=".HandlerActivity" />
         <activity android:name=".ConstraintLayoutActivity" />
-        <activity android:name=".ViewActivity" />
+        <activity android:name=".main.ViewActivity" />
         <activity android:name=".PieViewActivity" />
-        <activity android:name=".EventActivity" />
+        <activity android:name=".main.EventActivity" />
         <activity android:name=".fragment.ContainerActivity" />
-        <activity android:name=".ActActivity" />
+        <activity android:name=".main.ActActivity" />
         <activity android:name=".LifeCycleActivity" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".main.MainActivity" />
         <activity android:name=".DialogActivity" />
         <activity android:name=".ToastActivity" />
         <activity android:name=".WebViewActivity" />
-        <activity android:name=".UIActivity" />
+        <activity android:name=".main.UIActivity" />
         <activity android:name=".TextViewActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".EditTextActivity" />
