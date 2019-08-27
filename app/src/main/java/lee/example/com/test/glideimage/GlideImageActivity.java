@@ -54,7 +54,7 @@ public class GlideImageActivity extends AppCompatActivity {
                 //Gif图片
                 String url2 = "http://p1.pstatp.com/large/166200019850062839d3";
                 Glide.with(GlideImageActivity.this)
-                        .load(url2)
+                        .load(url1)
 //                        强制转换为动态图 如果是静态图转换动态 则会加载失败
 //                      //.asGif()
                         //强制转换静态图 如果是动态图的话会保留第一帧 但必须在load（）后面执行
@@ -79,9 +79,7 @@ public class GlideImageActivity extends AppCompatActivity {
                 //加载Uri对象
 //                URI  imageUri = getImageUri();
 //                Glide.with(GlideImageActivity.this).load(imageUri).into(mImageView);
-
             }
         });
-
     }
 }

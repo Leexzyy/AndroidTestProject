@@ -24,7 +24,8 @@ allprojects {
 
 allprojects {
     repositories {
-        maven { url "https://jitpack.io" }
+        maven {url "https://jitpack.io"}
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     }
 }
 

@@ -10,6 +10,13 @@
         android:layout_height="wrap_content"
         android:text="Take Photo"
         tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/btn_choose_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择照片"
+        tools:ignore="HardcodedText"/>
     <ImageView
         android:id="@+id/picture"
         android:layout_width="wrap_content"
